@@ -133,7 +133,7 @@ export class GameGateway implements OnGatewayDisconnect {
   }
   private handleAddBots() {
     // Generate auto-playerss
-    const bots = this.autoPlayers - this.players.length;
+    const bots = this.autoPlayers - this.players.length + 1;
     if (bots > 0) {
       for (let i = 0; i < bots; i++) {
         this.addPlayer(`bot-${i}`, `Bot ${i + 1}`, true);
