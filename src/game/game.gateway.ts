@@ -67,7 +67,7 @@ export class GameGateway implements OnGatewayDisconnect {
     this.multiplier = 0.0;
     this.freezePoint = Math.round(Math.random() * 1000) / 100; // Random freeze point between 0.01 and 10
     console.log(this.freezePoint);
-    const updateInterval = 5000 / data.speed; // Adjust interval based on speed
+    const updateInterval = 3500 / data.speed; // Adjust interval based on speed
 
     this.interval = setInterval(() => {
       if (this.multiplier >= this.freezePoint) {
